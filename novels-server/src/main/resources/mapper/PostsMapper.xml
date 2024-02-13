@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wx.novel.novels.mapper.PostsMapper">
+  <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Posts">
+    <!--@mbg.generated-->
+    <!--@Table posts-->
+    <id column="post_id" jdbcType="BIGINT" property="postId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="likes" jdbcType="INTEGER" property="likes" />
+    <result column="dislikes" jdbcType="INTEGER" property="dislikes" />
+    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
+    <result column="is_top" jdbcType="TINYINT" property="isTop" />
+    <result column="is_essence" jdbcType="TINYINT" property="isEssence" />
+    <result column="status" jdbcType="OTHER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    post_id, title, content, user_id, views, likes, dislikes, comment_count, is_top, 
+    is_essence, `status`, create_time, update_time
+  </sql>
+</mapper>

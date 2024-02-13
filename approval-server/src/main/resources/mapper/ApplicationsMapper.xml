@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wx.novel.approval.mapper.ApplicationsMapper">
+  <resultMap id="BaseResultMap" type="com.wx.novel.approval.model.domain.Applications">
+    <!--@mbg.generated-->
+    <!--@Table applications-->
+    <id column="application_id" jdbcType="BIGINT" property="applicationId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="process_id" jdbcType="BIGINT" property="processId" />
+    <result column="STATUS" jdbcType="OTHER" property="status" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    application_id, user_id, process_id, `STATUS`, created_time, updated_time
+  </sql>
+</mapper>

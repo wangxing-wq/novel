@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wx.novel.novels.mapper.StatisticsMapper">
+  <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Statistics">
+    <!--@mbg.generated-->
+    <!--@Table `statistics`-->
+    <id column="stat_id" jdbcType="BIGINT" property="statId" />
+    <result column="metric_name" jdbcType="VARCHAR" property="metricName" />
+    <result column="metric_value" jdbcType="INTEGER" property="metricValue" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    stat_id, metric_name, metric_value, created_time, updated_time
+  </sql>
+</mapper>
