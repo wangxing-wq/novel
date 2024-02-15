@@ -1,14 +1,15 @@
 package com.wx.novel.approval.service;
 
-import com.wx.novel.approval.model.domain.ApprovalProcesses;
 import com.baomidou.mybatisplus.extension.service.IService;
-    /**
- * @description: 
+import com.wx.novel.approval.model.domain.ApprovalProcesses;
+
+/**
  * @author 王兴
  * 2024/2/13 16-44
+ * @description:
  */
 
-public interface ApprovalProcessesService extends IService<ApprovalProcesses>{
+public interface ApprovalProcessesService extends IService<ApprovalProcesses> {
 
 
 }

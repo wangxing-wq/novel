@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wx.novel.novels.mapper.NovelsMapper">
-  <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Novels">
-    <!--@mbg.generated-->
-    <!--@Table novels-->
-    <id column="novel_id" jdbcType="BIGINT" property="novelId" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="author" jdbcType="VARCHAR" property="author" />
-    <result column="genre" jdbcType="VARCHAR" property="genre" />
-    <result column="description" jdbcType="LONGVARCHAR" property="description" />
-    <result column="cover_image_url" jdbcType="VARCHAR" property="coverImageUrl" />
-    <result column="STATUS" jdbcType="OTHER" property="status" />
-    <result column="word_count" jdbcType="INTEGER" property="wordCount" />
-    <result column="rating" jdbcType="DECIMAL" property="rating" />
-    <result column="favorites_count" jdbcType="INTEGER" property="favoritesCount" />
-    <result column="views_count" jdbcType="INTEGER" property="viewsCount" />
-    <result column="comments_count" jdbcType="INTEGER" property="commentsCount" />
-    <result column="likes_count" jdbcType="INTEGER" property="likesCount" />
-    <result column="completion_status" jdbcType="OTHER" property="completionStatus" />
-    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
-    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    novel_id, title, author, genre, description, cover_image_url, `STATUS`, word_count, 
-    rating, favorites_count, views_count, comments_count, likes_count, completion_status, 
-    created_time, updated_time
-  </sql>
+    <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Novels">
+        <!--@mbg.generated-->
+        <!--@Table novels-->
+        <id column="novel_id" jdbcType="BIGINT" property="novelId"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="genre" jdbcType="VARCHAR" property="genre"/>
+        <result column="description" jdbcType="LONGVARCHAR" property="description"/>
+        <result column="cover_image_url" jdbcType="VARCHAR" property="coverImageUrl"/>
+        <result column="STATUS" jdbcType="OTHER" property="status"/>
+        <result column="word_count" jdbcType="INTEGER" property="wordCount"/>
+        <result column="rating" jdbcType="DECIMAL" property="rating"/>
+        <result column="favorites_count" jdbcType="INTEGER" property="favoritesCount"/>
+        <result column="views_count" jdbcType="INTEGER" property="viewsCount"/>
+        <result column="comments_count" jdbcType="INTEGER" property="commentsCount"/>
+        <result column="likes_count" jdbcType="INTEGER" property="likesCount"/>
+        <result column="created_time" jdbcType="TIMESTAMP" property="createdTime"/>
+        <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        novel_id,
+        title,
+        author,
+        genre,
+        description,
+        cover_image_url,
+        `STATUS`,
+        word_count,
+        rating,
+        favorites_count,
+        views_count,
+        comments_count,
+        likes_count,
+        created_time,
+        updated_time
+    </sql>
+
+    <insert id="insertBatch">
+        INSERT INTO novels
+        (<include refid="Base_Column_List"/>)
+        VALUES
+        <foreach collection ="collection" item="item" separator =",">
+            (#{item.novelId}, #{item.title}, #{item.author},#{item.genre},#{item.description},#{item.coverImageUrl}
+            ,#{item.status},#{item.wordCount},#{item.rating},#{item.favoritesCount},#{item.viewsCount},#{item.commentsCount},#{item.likesCount},#{item.createdTime},#{item.updatedTime})
+        </foreach >
+    </insert>
 </mapper>

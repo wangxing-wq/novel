@@ -4,11 +4,12 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.util.Date;
 import lombok.Data;
 
+import java.util.Date;
+
 /**
- * @description: 
+ * @description:
  * @author 王兴
  * 2024/2/13 16-37
  */

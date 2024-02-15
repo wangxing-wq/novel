@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wx.novel.novels.mapper.CommentsMapper">
-  <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Comments">
-    <!--@mbg.generated-->
-    <!--@Table comments-->
-    <id column="comment_id" jdbcType="BIGINT" property="commentId" />
-    <result column="user_id" jdbcType="BIGINT" property="userId" />
-    <result column="content" jdbcType="LONGVARCHAR" property="content" />
-    <result column="parent_comment_id" jdbcType="INTEGER" property="parentCommentId" />
-    <result column="post_id" jdbcType="BIGINT" property="postId" />
-    <result column="STATUS" jdbcType="OTHER" property="status" />
-    <result column="likes" jdbcType="INTEGER" property="likes" />
-    <result column="dislikes" jdbcType="INTEGER" property="dislikes" />
-    <result column="reports" jdbcType="INTEGER" property="reports" />
-    <result column="user_ip" jdbcType="VARCHAR" property="userIp" />
-    <result column="device_info" jdbcType="VARCHAR" property="deviceInfo" />
-    <result column="auditor_id" jdbcType="INTEGER" property="auditorId" />
-    <result column="tags" jdbcType="VARCHAR" property="tags" />
-    <result column="attachments" jdbcType="LONGVARCHAR" property="attachments" />
-    <result column="reply_count" jdbcType="INTEGER" property="replyCount" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    comment_id, user_id, content, parent_comment_id, post_id, `STATUS`, likes, dislikes, 
-    reports, user_ip, device_info, auditor_id, tags, attachments, reply_count, create_time, 
-    update_time
-  </sql>
+    <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Comments">
+        <!--@mbg.generated-->
+        <!--@Table comments-->
+        <id column="comment_id" jdbcType="BIGINT" property="commentId"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="content" jdbcType="LONGVARCHAR" property="content"/>
+        <result column="parent_comment_id" jdbcType="INTEGER" property="parentCommentId"/>
+        <result column="post_id" jdbcType="BIGINT" property="postId"/>
+        <result column="STATUS" jdbcType="OTHER" property="status"/>
+        <result column="likes" jdbcType="INTEGER" property="likes"/>
+        <result column="dislikes" jdbcType="INTEGER" property="dislikes"/>
+        <result column="reports" jdbcType="INTEGER" property="reports"/>
+        <result column="user_ip" jdbcType="VARCHAR" property="userIp"/>
+        <result column="device_info" jdbcType="VARCHAR" property="deviceInfo"/>
+        <result column="auditor_id" jdbcType="INTEGER" property="auditorId"/>
+        <result column="tags" jdbcType="VARCHAR" property="tags"/>
+        <result column="attachments" jdbcType="LONGVARCHAR" property="attachments"/>
+        <result column="reply_count" jdbcType="INTEGER" property="replyCount"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        comment_id,
+        user_id,
+        content,
+        parent_comment_id,
+        post_id,
+        `STATUS`,
+        likes,
+        dislikes,
+        reports,
+        user_ip,
+        device_info,
+        auditor_id,
+        tags,
+        attachments,
+        reply_count,
+        create_time,
+        update_time
+    </sql>
 </mapper>

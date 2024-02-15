@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wx.novel.novels.mapper.CommentCountersMapper">
-  <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.CommentCounters">
-    <!--@mbg.generated-->
-    <!--@Table comment_counters-->
-    <id column="post_id" jdbcType="BIGINT" property="postId" />
-    <result column="total_comments" jdbcType="INTEGER" property="totalComments" />
-    <result column="root_comments" jdbcType="INTEGER" property="rootComments" />
-    <result column="sub_comments" jdbcType="INTEGER" property="subComments" />
-    <result column="likes" jdbcType="INTEGER" property="likes" />
-    <result column="dislikes" jdbcType="INTEGER" property="dislikes" />
-    <result column="reports" jdbcType="INTEGER" property="reports" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    post_id, total_comments, root_comments, sub_comments, likes, dislikes, reports
-  </sql>
+    <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.CommentCounters">
+        <!--@mbg.generated-->
+        <!--@Table comment_counters-->
+        <id column="post_id" jdbcType="BIGINT" property="postId"/>
+        <result column="total_comments" jdbcType="INTEGER" property="totalComments"/>
+        <result column="root_comments" jdbcType="INTEGER" property="rootComments"/>
+        <result column="sub_comments" jdbcType="INTEGER" property="subComments"/>
+        <result column="likes" jdbcType="INTEGER" property="likes"/>
+        <result column="dislikes" jdbcType="INTEGER" property="dislikes"/>
+        <result column="reports" jdbcType="INTEGER" property="reports"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        post_id,
+        total_comments,
+        root_comments,
+        sub_comments,
+        likes,
+        dislikes,
+        reports
+    </sql>
 </mapper>

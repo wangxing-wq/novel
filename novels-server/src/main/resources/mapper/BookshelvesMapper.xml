@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wx.novel.novels.mapper.BookshelvesMapper">
-  <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Bookshelves">
-    <!--@mbg.generated-->
-    <!--@Table bookshelves-->
-    <id column="shelf_id" jdbcType="BIGINT" property="shelfId" />
-    <result column="user_id" jdbcType="BIGINT" property="userId" />
-    <result column="novel_id" jdbcType="BIGINT" property="novelId" />
-    <result column="novel_name" jdbcType="VARCHAR" property="novelName" />
-    <result column="collection_name" jdbcType="VARCHAR" property="collectionName" />
-    <result column="is_public" jdbcType="TINYINT" property="isPublic" />
-    <result column="order_index" jdbcType="INTEGER" property="orderIndex" />
-    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
-    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    shelf_id, user_id, novel_id, novel_name, collection_name, is_public, order_index, 
-    created_time, updated_time
-  </sql>
+    <resultMap id="BaseResultMap" type="com.wx.novel.novels.model.domain.Bookshelves">
+        <!--@mbg.generated-->
+        <!--@Table bookshelves-->
+        <id column="shelf_id" jdbcType="BIGINT" property="shelfId"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="novel_id" jdbcType="BIGINT" property="novelId"/>
+        <result column="novel_name" jdbcType="VARCHAR" property="novelName"/>
+        <result column="collection_name" jdbcType="VARCHAR" property="collectionName"/>
+        <result column="is_public" jdbcType="TINYINT" property="isPublic"/>
+        <result column="order_index" jdbcType="INTEGER" property="orderIndex"/>
+        <result column="created_time" jdbcType="TIMESTAMP" property="createdTime"/>
+        <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        shelf_id,
+        user_id,
+        novel_id,
+        novel_name,
+        collection_name,
+        is_public,
+        order_index,
+        created_time,
+        updated_time
+    </sql>
 </mapper>

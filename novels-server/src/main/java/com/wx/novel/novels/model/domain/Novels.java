@@ -4,9 +4,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.math.BigDecimal;
-import java.util.Date;
 import lombok.Data;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * @author 王兴
@@ -17,6 +18,7 @@ import lombok.Data;
 @Data
 @TableName(value = "novels")
 public class Novels {
+
     /**
      * 小说ID
      */
@@ -57,7 +59,7 @@ public class Novels {
      * 状态
      */
     @TableField(value = "`STATUS`")
-    private Object status;
+    private String status;
 
     /**
      * 字数
@@ -95,21 +97,17 @@ public class Novels {
     @TableField(value = "likes_count")
     private Integer likesCount;
 
-    /**
-     * 完结状态
-     */
-    @TableField(value = "completion_status")
-    private Object completionStatus;
 
     /**
      * 创建时间
      */
     @TableField(value = "created_time")
-    private Date createdTime;
+    private LocalDateTime createdTime;
 
     /**
      * 更新时间
      */
     @TableField(value = "updated_time")
-    private Date updatedTime;
+    private LocalDateTime updatedTime;
+
 }

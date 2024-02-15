@@ -1,14 +1,15 @@
 package com.wx.novel.novels.service;
 
-import com.wx.novel.novels.model.domain.Bookshelves;
 import com.baomidou.mybatisplus.extension.service.IService;
-    /**
- * @description: 
+import com.wx.novel.novels.model.domain.Bookshelves;
+
+/**
  * @author 王兴
  * 2024/2/13 16-37
+ * @description:
  */
 
-public interface BookshelvesService extends IService<Bookshelves>{
+public interface BookshelvesService extends IService<Bookshelves> {
 
 
 }
